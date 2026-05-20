@@ -1,0 +1,66 @@
+name: dumper_accounting_app
+description: Offline-first Dumper Accounting System for Pakistan's transport businesses.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.1.0 <4.0.0"
+  flutter: ">=3.13.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.4.9
+
+  # Local Database
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0+1
+
+  # PDF & Printing
+  pdf: ^3.10.4
+  printing: ^5.11.0
+
+  # CSV Export
+  csv: ^6.0.0
+
+  # File Management & Sharing
+  path_provider: ^2.1.1
+  share_plus: ^7.2.1
+  file_picker: ^6.1.1
+
+  # Archiving for backup (ZIP)
+  archive: ^3.4.9
+
+  # Localization
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.1
+
+  # Responsive UI
+  flutter_screenutil: ^5.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Isar code generator
+  build_runner: ^2.4.7
+  isar_generator: ^3.1.0+1
+
+  # Linting
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/images/
+    - assets/locales/
+
+  fonts:
+    - family: NotoNastaliqUrdu
+      fonts:
+        - asset: assets/fonts/NotoNastaliqUrdu.ttf
