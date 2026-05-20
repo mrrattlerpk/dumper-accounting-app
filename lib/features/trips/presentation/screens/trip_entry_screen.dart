@@ -14,6 +14,12 @@ import '../../../../data/repositories/material_repository_impl.dart';
 import '../providers/trip_entry_provider.dart';
 import '../widgets/payment_status_chip.dart';
 
+// Providers from other features used in this screen
+import '../../../drivers/presentation/providers/drivers_provider.dart';
+import '../../../dumpers/presentation/providers/dumpers_provider.dart';
+import '../../../customers/presentation/providers/customers_provider.dart';
+import '../../../materials/presentation/providers/materials_provider.dart';
+
 /// Optimized one-hand trip entry screen.
 class TripEntryScreen extends ConsumerStatefulWidget {
   const TripEntryScreen({super.key});
@@ -352,20 +358,3 @@ class _TripEntryScreenState extends ConsumerState<TripEntryScreen> {
     });
   }
 }
-
-// Local imports for async providers used in the screen
-// (they are already in scope via riverpod providers for lists)
-// We need to ensure that the providers 'driversProvider', 'dumpersProvider',
-// 'customersProvider', 'materialsProvider' are accessible.
-// They are defined in the respective feature providers.
-// So we add the imports at top.
-
-// Adding missing imports:
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../drivers/presentation/providers/drivers_provider.dart';
-import '../../../dumpers/presentation/providers/dumpers_provider.dart';
-import '../../../customers/presentation/providers/customers_provider.dart';
-import '../../../materials/presentation/providers/materials_provider.dart';
-// Actually the imports must be exact relative paths from the current file.
-// So correct them.
-// We'll add the correct relative imports at the top of the file.
