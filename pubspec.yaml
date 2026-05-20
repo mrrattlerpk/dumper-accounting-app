@@ -14,9 +14,9 @@ dependencies:
   # State Management
   flutter_riverpod: ^2.4.9
 
-  # Local Database
-  isar: ^3.1.0+1
-  isar_flutter_libs: ^3.1.0+1
+  # Local Database – UPGRADED to v4 pre‑release for Dart 3.12+ support
+  isar: ^4.0.0-dev.0
+  isar_flutter_libs: ^4.0.0-dev.0
 
   # PDF & Printing
   pdf: ^3.10.4
@@ -44,10 +44,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
-  # Isar code generator
+  # Isar code generator – UPGRADED to v4 pre‑release
   build_runner: ^2.4.7
-  isar_generator: ^3.1.0+1
+  isar_generator: ^4.0.0-dev.0
 
   # Linting
   flutter_lints: ^3.0.1
