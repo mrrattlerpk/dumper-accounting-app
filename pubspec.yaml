@@ -28,8 +28,7 @@ dependencies:
   # File Management & Sharing
   path_provider: ^2.1.1
   share_plus: ^7.2.1
-  file_picker: ^6.1.1
-
+  file_picker: ^10.3.10
   # Archiving for backup (ZIP)
   archive: ^3.4.9
 
