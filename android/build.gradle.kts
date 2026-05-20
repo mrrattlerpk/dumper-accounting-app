@@ -15,7 +15,23 @@ subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 }
+
 subprojects {
+    afterEvaluate {
+        extensions.findByType<com.android.build.gradle.BaseExtension>()?.let { base ->
+            if (base.namespace.isNullOrEmpty()) {
+                val manifestFile = base.sourceSets.getByName("main").manifest.srcFile
+                if (manifestFile.exists()) {
+                    val packageName = manifestFile.readText().let { text ->
+                        Regex("package=\"(.*?)\"").find(text)?.groupValues?.get(1)
+                    }
+                    if (packageName != null) {
+                        base.namespace = packageName
+                    }
+                }
+            }
+        }
+    }
     project.evaluationDependsOn(":app")
 }
 
